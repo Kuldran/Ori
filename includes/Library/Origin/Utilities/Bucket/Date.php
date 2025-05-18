@@ -1,10 +1,13 @@
 <?php
+
+
+declare(strict_types=1);
+
 namespace Origin\Utilities\Bucket;
 
-use \Exception;
 
 trait Date {
-	public function Date(\DateTime $value = null){
-		return $this->Bucket(null, $value);
-	}
+    public function Date(?\DateTime $value = NULL) {
+        return $this->Bucket(NULL, $value);
+    }
 }

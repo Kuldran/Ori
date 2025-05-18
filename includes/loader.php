@@ -1,12 +1,16 @@
 <?php
+
+
+declare(strict_types=1);
+
 // Required global constants.
 define('NAMESPACE', '\\');
 define('DEBUG', file_exists('hidden/config/sandbox.json'));
 define('DEVELOPMENT', !file_exists('hidden/config/production.json'));
 
 // Composer Integration Support
-if(file_exists('vendor/autoload.php')){
-  require_once('vendor/autoload.php');
+if (file_exists('vendor/autoload.php')) {
+    require_once('vendor/autoload.php');
 }
 
 // Autoloader setup and configuration.
