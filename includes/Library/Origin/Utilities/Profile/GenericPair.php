@@ -17,7 +17,7 @@ class GenericPair implements \Origin\Utilities\Profile\Interfaces\iTimingPair {
         $this->things['Start'] = microtime(TRUE);
     }
     
-    public function jsonSerialize() {
+    public function jsonSerialize(): mixed {
         return $this->things;
     }
     

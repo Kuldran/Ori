@@ -43,7 +43,7 @@ class CustomStorage extends \ArrayObject implements \JsonSerializable {
         return $return;
     }
     
-    public function jsonSerialize() {
+    public function jsonSerialize(): mixed {
         $return = $this->getArrayCopy();
         if (isset($return['AuthenticationTokens'])) {
             unset($return['AuthenticationTokens']);

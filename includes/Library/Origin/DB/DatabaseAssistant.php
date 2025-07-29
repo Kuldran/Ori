@@ -23,7 +23,7 @@ abstract class DatabaseAssistant implements \JsonSerializable {
         $this->database = DB::Get(Settings::Get()->Value(['origin', 'default_database']));
     }
     
-    public function jsonSerialize() {
+    public function jsonSerialize(): mixed {
         $return = $this->things;
         if (isset($return['ClassSpace'])) {
             unset($return['ClassSpace']);
