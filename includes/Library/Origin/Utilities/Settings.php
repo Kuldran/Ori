@@ -146,7 +146,7 @@ class Settings extends \Origin\Utilities\Types\Singleton {
             if (is_array($value)) {
                 $result[] = sprintf(static::$array_format_value, str_replace('"', '\"', $key), $this->GenerateCache($value, FALSE));
             } else {
-                $result[] = sprintf(static::$array_format, str_replace('"', '\"', $key), str_replace('"', '\"', $value));
+                $result[] = sprintf(static::$array_format, str_replace('"', '\"', strval($key)), str_replace('"', '\"', strval($value)));
             }
         }
         

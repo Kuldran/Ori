@@ -61,7 +61,7 @@ class GenericTiming implements \Origin\Utilities\Profile\Interfaces\iTimingHandl
         return $this->stack;
     }
     
-    public function jsonSerialize() {
+    public function jsonSerialize(): mixed {
         $total = 0;
         $highest = 0;
         $lowest = NULL;
